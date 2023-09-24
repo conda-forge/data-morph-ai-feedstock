@@ -1,5 +1,5 @@
 {% set name = "data-morph-ai" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cfa23d793d3c6f9f1772670b763051950a7ab4e0c0fd346fbc2c8c69db3960fc
+  sha256: 23b22a133b8fdf673ed47321dc74d8cfa4ea78178bb0dcd8169eeb7ce7583490
 
 build:
   entry_points:
@@ -27,7 +27,7 @@ requirements:
     - matplotlib-base >=3.3
     - numpy >=1.20
     - pandas >=1.2
-    - pytweening >=1.0.3
+    - pytweening >=1.0.5
     - scipy >=1.10.0
     - tqdm >=4.64.1
 
