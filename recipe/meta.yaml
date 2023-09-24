@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data-morph-ai-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cfa23d793d3c6f9f1772670b763051950a7ab4e0c0fd346fbc2c8c69db3960fc
 
 build:
@@ -47,6 +47,10 @@ about:
   doc_url: https://stefmolin.github.io/data-morph
   license: MIT
   license_file: LICENSE
+  description: |
+    Data Morph transforms an input dataset of 2D points into select shapes,
+    while preserving the summary statistics to a given number of decimal points
+    through simulated annealing.
 
 extra:
   recipe-maintainers:
