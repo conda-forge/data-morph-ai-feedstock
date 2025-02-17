@@ -14,8 +14,9 @@ Development: https://github.com/stefmolin/data-morph
 Documentation: https://stefmolin.github.io/data-morph
 
 Data Morph transforms an input dataset of 2D points into select shapes,
-while preserving the summary statistics to a given number of decimal points
-through simulated annealing.
+while preserving the summary statistics to a given number of decimal
+points through simulated annealing. It is intended to be used as a
+teaching tool to illustrate the importance of data visualization.
 
 
 Current build status
