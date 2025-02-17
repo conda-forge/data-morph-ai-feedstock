@@ -3,7 +3,7 @@ About data-morph-ai-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/data-morph-ai-feedstock/blob/main/LICENSE.txt)
 
-Home: https://stefmolin.github.io/data-morph
+Home: https://stefaniemolin.com/data-morph
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: Teaching tool on the importance of data visualization.
 
 Development: https://github.com/stefmolin/data-morph
 
-Documentation: https://stefmolin.github.io/data-morph
+Documentation: https://stefaniemolin.com/data-morph
 
 Data Morph transforms an input dataset of 2D points into select shapes,
 while preserving the summary statistics to a given number of decimal
