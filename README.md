@@ -18,7 +18,6 @@ while preserving the summary statistics to a given number of decimal
 points through simulated annealing. It is intended to be used as a
 teaching tool to illustrate the importance of data visualization.
 
-
 Current build status
 ====================
 
