@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  name: data-morph-ai
+  version: "0.4.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 0f5c19d28e77eac05cb09f6fe6cb034234be82e915644dcf19bdb8c1840ef20c
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - data-morph = data_morph.cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - setuptools-scm
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - matplotlib-base >=3.10
+    - numpy >=1.23
+    - pandas >=2.1
+    - pillow >=12.3
+    - rich >=13.9.4
+
+tests:
+  - python:
+      imports:
+        - data_morph
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - data-morph --help
+
+about:
+  summary: Teaching tool on the importance of data visualization.
+  license: MIT
+  license_file: LICENSE
+  description: |
+    Data Morph transforms an input dataset of 2D points into select shapes,
+    while preserving the summary statistics to a given number of decimal
+    points through simulated annealing. It is intended to be used as a
+    teaching tool to illustrate the importance of data visualization.
+  homepage: https://stefaniemolin.com/data-morph
+  repository: https://github.com/stefmolin/data-morph
+  documentation: https://stefaniemolin.com/data-morph
+
+extra:
+  recipe-maintainers:
+    - stefmolin
