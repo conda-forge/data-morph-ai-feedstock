@@ -39,7 +39,9 @@ tests:
       imports:
         - data_morph
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
@@ -56,8 +58,6 @@ about:
     while preserving the summary statistics to a given number of decimal
     points through simulated annealing. It is intended to be used as a
     teaching tool to illustrate the importance of data visualization.
-
-
   homepage: https://stefaniemolin.com/data-morph
   repository: https://github.com/stefmolin/data-morph
   documentation: https://stefaniemolin.com/data-morph
